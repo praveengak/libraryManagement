@@ -1,16 +1,21 @@
 package com.example.libraryManagement.entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
+@Data
+@Entity
 public class IssueRecord {
 
     private Long id;
-    private Date issueDate;
-    private Date dueDate;
-    private Date returnDate;
+    private LocalDate issueDate;
+    private LocalDate dueDate;
+    private LocalDate returnDate;
 
     private Boolean isReturn;
 
